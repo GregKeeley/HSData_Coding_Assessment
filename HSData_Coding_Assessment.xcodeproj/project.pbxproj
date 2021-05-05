@@ -21,7 +21,6 @@
 		8885809E2643057C005D973C /* SATScoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8885809D2643057C005D973C /* SATScoreModel.swift */; };
 		888580A02643058A005D973C /* HighSchoolViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8885809F2643058A005D973C /* HighSchoolViewModel.swift */; };
 		888580A2264315FB005D973C /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888580A1264315FB005D973C /* NetworkHelper.swift */; };
-		888580A426431BB3005D973C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 888580A326431BB3005D973C /* Main.storyboard */; };
 		888580A626432794005D973C /* HighSchoolDataAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888580A526432794005D973C /* HighSchoolDataAPIClient.swift */; };
 /* End PBXBuildFile section */
 
@@ -63,7 +62,6 @@
 		8885809D2643057C005D973C /* SATScoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SATScoreModel.swift; sourceTree = "<group>"; };
 		8885809F2643058A005D973C /* HighSchoolViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighSchoolViewModel.swift; sourceTree = "<group>"; };
 		888580A1264315FB005D973C /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
-		888580A326431BB3005D973C /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		888580A526432794005D973C /* HighSchoolDataAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighSchoolDataAPIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,13 +113,12 @@
 		8885805F2642F6E8005D973C /* HSData_Coding_Assessment */ = {
 			isa = PBXGroup;
 			children = (
+				888580902642F792005D973C /* Supporting Files */,
 				8885809A2643055A005D973C /* Models */,
 				88858092264303CE005D973C /* Network Services */,
-				888580902642F792005D973C /* Supporting Files */,
 				88858094264304C3005D973C /* High School List */,
 				88858095264304CC005D973C /* High School Detail */,
 				8885806E2642F6EA005D973C /* Info.plist */,
-				888580A326431BB3005D973C /* Main.storyboard */,
 			);
 			path = HSData_Coding_Assessment;
 			sourceTree = "<group>";
@@ -304,7 +301,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				888580992643053B005D973C /* HighSchoolDetailView.storyboard in Resources */,
-				888580A426431BB3005D973C /* Main.storyboard in Resources */,
 				8885806D2642F6EA005D973C /* LaunchScreen.storyboard in Resources */,
 				8885806A2642F6EA005D973C /* Assets.xcassets in Resources */,
 				888580682642F6E8005D973C /* HighSchoolListView.storyboard in Resources */,
