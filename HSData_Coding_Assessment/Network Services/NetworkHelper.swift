@@ -10,7 +10,7 @@ import Foundation
 enum AppError: Error {
     case badURL(String)
     case noResponse
-    case networkClientError
+    case networkClientError(Error)
     case noData
     case decodingError(Error)
     case encodingError(Error)
@@ -28,8 +28,8 @@ class NetworkHelper {
     
     public func performDataTask(with request: URLRequest, completion: @escaping (Result<Data, AppError>) -> ()) {
         let dataTask = urlSession.dataTask(with: request) { (data, response, error) in
-            if error != nil {
-                completion(.failure(.networkClientError))
+            if let error = error {
+                completion(.failure(.networkClientError(error)))
                 return
             }
             guard let urlResponse = response as? HTTPURLResponse else {

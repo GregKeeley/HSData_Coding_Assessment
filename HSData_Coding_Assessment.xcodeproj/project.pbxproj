@@ -22,6 +22,7 @@
 		888580A02643058A005D973C /* HighSchoolViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8885809F2643058A005D973C /* HighSchoolViewModel.swift */; };
 		888580A2264315FB005D973C /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888580A1264315FB005D973C /* NetworkHelper.swift */; };
 		888580A426431BB3005D973C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 888580A326431BB3005D973C /* Main.storyboard */; };
+		888580A626432794005D973C /* HighSchoolDataAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888580A526432794005D973C /* HighSchoolDataAPIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		8885809F2643058A005D973C /* HighSchoolViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighSchoolViewModel.swift; sourceTree = "<group>"; };
 		888580A1264315FB005D973C /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		888580A326431BB3005D973C /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		888580A526432794005D973C /* HighSchoolDataAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighSchoolDataAPIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 		88858093264304AD005D973C /* API Clients */ = {
 			isa = PBXGroup;
 			children = (
+				888580A526432794005D973C /* HighSchoolDataAPIClient.swift */,
 			);
 			path = "API Clients";
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				888580612642F6E8005D973C /* AppDelegate.swift in Sources */,
 				888580632642F6E8005D973C /* SceneDelegate.swift in Sources */,
 				888580A02643058A005D973C /* HighSchoolViewModel.swift in Sources */,
+				888580A626432794005D973C /* HighSchoolDataAPIClient.swift in Sources */,
 				8885809C2643056F005D973C /* HighSchoolModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

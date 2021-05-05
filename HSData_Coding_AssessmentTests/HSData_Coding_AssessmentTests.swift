@@ -10,6 +10,7 @@ import XCTest
 
 class HSData_Coding_AssessmentTests: XCTestCase {
     
+    // Test the NetworkHelper with to ensure it can perform a datatask successfully
     func testNetworkHelper() {
         let exp = XCTestExpectation(description: "fetched Data")
         let url = URL(string: "https://data.cityofnewyork.us/resource/s3k6-pzi2.json")!
@@ -27,6 +28,7 @@ class HSData_Coding_AssessmentTests: XCTestCase {
         }
     }
     
+    // Test the model for High School data to ensure it is being unwrapped correctly
     func testHighSchoolModel() {
         let jsonData = """
             {
@@ -105,6 +107,7 @@ class HSData_Coding_AssessmentTests: XCTestCase {
         }
     }
     
+    // Test the High School SAT Scores model to ensure it is being unwrapped correctly
     func testHighSchoolSATScoreModel() {
         let jsonData = """
             {
@@ -127,4 +130,32 @@ class HSData_Coding_AssessmentTests: XCTestCase {
         }
     }
     
+    // Test the API Client for High School data to ensure it is hitting the endpoint and unwrapping as expected
+    func testHighSchoolAPI() {
+        var highSchools = [HighSchool]()
+        HighSchoolDataAPIClient.fetchHighSchools { (results) in
+            switch results {
+            case .failure(let appError):
+                XCTFail("Failed to fetch high school data: \(appError)")
+            case .success(let data):
+                highSchools = data
+                XCTAssertGreaterThan(1, highSchools.count)
+            }
+        }
+    }
+    
+    // Test the SAT Score API Client to ensure it is hitting its endpoint and unwrapping as expected
+    func testHighSchoolSATScoreAPI() {
+        var highSchoolSATScores = [HighSchoolSATScore]()
+        HighSchoolDataAPIClient.fetchSATScores { (results) in
+            switch results {
+            case .failure(let appError):
+                XCTFail("Failed to fetch high school data: \(appError)")
+            case .success(let data):
+                highSchoolSATScores = data
+                XCTAssertGreaterThan(1, highSchoolSATScores.count)
+            }
+            
+        }
+    }
 }
