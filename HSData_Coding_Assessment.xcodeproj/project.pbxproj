@@ -20,6 +20,8 @@
 		8885809C2643056F005D973C /* HighSchoolModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8885809B2643056F005D973C /* HighSchoolModel.swift */; };
 		8885809E2643057C005D973C /* SATScoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8885809D2643057C005D973C /* SATScoreModel.swift */; };
 		888580A02643058A005D973C /* HighSchoolViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8885809F2643058A005D973C /* HighSchoolViewModel.swift */; };
+		888580A2264315FB005D973C /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888580A1264315FB005D973C /* NetworkHelper.swift */; };
+		888580A426431BB3005D973C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 888580A326431BB3005D973C /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		8885809B2643056F005D973C /* HighSchoolModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighSchoolModel.swift; sourceTree = "<group>"; };
 		8885809D2643057C005D973C /* SATScoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SATScoreModel.swift; sourceTree = "<group>"; };
 		8885809F2643058A005D973C /* HighSchoolViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighSchoolViewModel.swift; sourceTree = "<group>"; };
+		888580A1264315FB005D973C /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		888580A326431BB3005D973C /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,7 @@
 				88858094264304C3005D973C /* High School List */,
 				88858095264304CC005D973C /* High School Detail */,
 				8885806E2642F6EA005D973C /* Info.plist */,
+				888580A326431BB3005D973C /* Main.storyboard */,
 			);
 			path = HSData_Coding_Assessment;
 			sourceTree = "<group>";
@@ -152,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				88858093264304AD005D973C /* API Clients */,
+				888580A1264315FB005D973C /* NetworkHelper.swift */,
 			);
 			path = "Network Services";
 			sourceTree = "<group>";
@@ -295,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				888580992643053B005D973C /* HighSchoolDetailView.storyboard in Resources */,
+				888580A426431BB3005D973C /* Main.storyboard in Resources */,
 				8885806D2642F6EA005D973C /* LaunchScreen.storyboard in Resources */,
 				8885806A2642F6EA005D973C /* Assets.xcassets in Resources */,
 				888580682642F6E8005D973C /* HighSchoolListView.storyboard in Resources */,
@@ -322,6 +329,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				888580A2264315FB005D973C /* NetworkHelper.swift in Sources */,
 				888580652642F6E8005D973C /* HighSchoolListViewController.swift in Sources */,
 				8885809E2643057C005D973C /* SATScoreModel.swift in Sources */,
 				8885809726430525005D973C /* HighSchoolDetailViewController.swift in Sources */,

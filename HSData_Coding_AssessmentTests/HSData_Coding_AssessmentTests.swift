@@ -10,23 +10,20 @@ import XCTest
 
 class HSData_Coding_AssessmentTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testNetworkHelper() {
+        let exp = XCTestExpectation(description: "fetched Data")
+        let url = URL(string: "https://data.cityofnewyork.us/resource/s3k6-pzi2.json")!
+        
+        let request = URLRequest(url: url)
+        
+        NetworkHelper.shared.performDataTask(with: request) { (result) in
+            switch result {
+            case .failure(let appError):
+            XCTFail("Failed to fetch data: \(appError)")
+            case .success(let data):
+                XCTAssertGreaterThan(data.count, 1)
+                exp.fulfill()
+            }
         }
     }
 
