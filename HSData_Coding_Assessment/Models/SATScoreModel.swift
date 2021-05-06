@@ -11,6 +11,15 @@ class HighSchoolSATScore: Decodable {
     
     let dbn: String, numOfSATTestTakers: String, schoolName: String, avgCriticalReadingScore: String, avgMathScore: String, avgWritingScore: String
     
+    init(dbn: String, numOfSATTestTakers: String, schoolName: String, avgCriticalReadingScore: String, avgMathScore: String, avgWritingScore: String) {
+        self.dbn = dbn
+        self.numOfSATTestTakers = numOfSATTestTakers
+        self.schoolName = schoolName
+        self.avgCriticalReadingScore = avgCriticalReadingScore
+        self.avgMathScore = avgMathScore
+        self.avgWritingScore = avgWritingScore
+    }
+    
     private enum CodingKeys: String, CodingKey {
         case dbn
         case numOfSATTestTakers = "num_of_sat_test_takers"

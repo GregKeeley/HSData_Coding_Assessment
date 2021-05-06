@@ -97,10 +97,9 @@ extension HighSchoolListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let highSchool = highSchoolViewModels[indexPath.row]
         guard let satScoreForHighSchool = highSchoolsSATScores.first(where: {$0.dbn == highSchool.dbn }) else {
-            print("dbn not found")
+            showAlert(title: "No SAT Data", message: "Sorry, it appears there is no SAT information for this school")
             return
         }
-        
         if let satScoreDetailViewController = UIStoryboard(name: "HighSchoolDetailView", bundle: nil).instantiateViewController(identifier: "SATScoreDetailView") as? HighSchoolDetailViewController {
             satScoreDetailViewController.satScoreViewModel = HighSchoolSATScoreViewModel(highSchoolSATScore: satScoreForHighSchool)
             if let navigator = navigationController {

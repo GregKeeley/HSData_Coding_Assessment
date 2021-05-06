@@ -26,6 +26,7 @@
 		888580AB2643626D005D973C /* UIStyleGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888580AA2643626D005D973C /* UIStyleGuide.swift */; };
 		888580AE2643982D005D973C /* HighSchoolSATScoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888580AD2643982C005D973C /* HighSchoolSATScoreViewModel.swift */; };
 		888580B026442365005D973C /* CustomProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888580AF26442365005D973C /* CustomProgressBar.swift */; };
+		889A5E67264440650042FCF7 /* ShowAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889A5E66264440650042FCF7 /* ShowAlert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		888580AA2643626D005D973C /* UIStyleGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStyleGuide.swift; sourceTree = "<group>"; };
 		888580AD2643982C005D973C /* HighSchoolSATScoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighSchoolSATScoreViewModel.swift; sourceTree = "<group>"; };
 		888580AF26442365005D973C /* CustomProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressBar.swift; sourceTree = "<group>"; };
+		889A5E66264440650042FCF7 /* ShowAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "\U0010ShowAlert.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +214,7 @@
 			children = (
 				888580A826435EB3005D973C /* HighSchoolTableViewCell.swift */,
 				888580AF26442365005D973C /* CustomProgressBar.swift */,
+				889A5E66264440650042FCF7 /* ShowAlert.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				889A5E67264440650042FCF7 /* ShowAlert.swift in Sources */,
 				888580B026442365005D973C /* CustomProgressBar.swift in Sources */,
 				888580A2264315FB005D973C /* NetworkHelper.swift in Sources */,
 				888580652642F6E8005D973C /* HighSchoolListViewController.swift in Sources */,
