@@ -15,11 +15,12 @@ class HighSchoolTableViewCell: UITableViewCell {
             detailTextLabel?.text = highSchoolViewModel.neighborhood
         }
     }
-
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
         textLabel?.font = UIFont.boldSystemFont(ofSize: 24)
-        textLabel?.sizeToFit()
+        textLabel?.numberOfLines = 2
+        textLabel?.adjustsFontSizeToFitWidth = true
         textLabel?.textColor = AppColors.primaryDarkBlue
         detailTextLabel?.textColor = .black
         detailTextLabel?.font = UIFont.systemFont(ofSize: 20,

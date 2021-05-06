@@ -15,8 +15,16 @@ class HighSchoolListViewController: UIViewController {
     //MARK:- Variables/Constants
     var resultSearchController = UISearchController()
     
-    var highSchoolViewModels = [HighSchoolViewModel]()
-    var highSchoolsSATScores = [HighSchoolSATScore]()
+    var highSchoolViewModels = [HighSchoolViewModel]() {
+        didSet {
+            print("No of High Schools: \(highSchoolViewModels.count)")
+        }
+    }
+    var highSchoolsSATScores = [HighSchoolSATScore]() {
+        didSet {
+            print("No of SAT Score for schools: \(highSchoolsSATScores.count)")
+        }
+    }
     
     //MARK:- View Life Cycles
     override func viewDidLoad() {
@@ -96,7 +104,14 @@ class HighSchoolListViewController: UIViewController {
 
 // Tableview Delegate
 extension HighSchoolListViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let highSchool = highSchoolViewModels[indexPath.row]
+        guard let satScoreForHighSchool = highSchoolsSATScores.first(where: {$0.dbn == highSchool.dbn }) else {
+            print("dbn not found")
+            return
+        }
+        dump(satScoreForHighSchool)
+    }
 }
 // Tableview DataSource
 extension HighSchoolListViewController: UITableViewDataSource {
