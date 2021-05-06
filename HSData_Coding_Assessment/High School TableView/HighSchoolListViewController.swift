@@ -14,9 +14,12 @@ class HighSchoolListViewController: UIViewController {
     
     //MARK:- Variables/Constants
     var resultSearchController = UISearchController()
-    
     var highSchoolViewModels = [HighSchoolViewModel]()
     var highSchoolsSATScores = [HighSchoolSATScore]()
+    var filteredHighSchoolViewModels = [HighSchoolViewModel]()
+    var currentlySearching = false
+    
+    
     
     //MARK:- View Life Cycles
     override func viewDidLoad() {
@@ -86,6 +89,11 @@ class HighSchoolListViewController: UIViewController {
         }
     }
     
+    private func searchHighSchools(_ query: String) {
+        filteredHighSchoolViewModels = highSchoolViewModels.filter {
+            $0.schoolName.lowercased().contains(query.lowercased())
+        }
+    }
     //MARK:- @IBActions
 
 }
@@ -95,7 +103,10 @@ class HighSchoolListViewController: UIViewController {
 // Tableview Delegate
 extension HighSchoolListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let highSchool = highSchoolViewModels[indexPath.row]
+        var highSchool = highSchoolViewModels[indexPath.row]
+        if currentlySearching {
+            highSchool = filteredHighSchoolViewModels[indexPath.row]
+        }
         guard let satScoreForHighSchool = highSchoolsSATScores.first(where: {$0.dbn == highSchool.dbn }) else {
             showAlert(title: "No SAT Data", message: "Sorry, it appears there is no SAT information for this school")
             return
@@ -112,14 +123,21 @@ extension HighSchoolListViewController: UITableViewDelegate {
 // Tableview DataSource
 extension HighSchoolListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return highSchoolViewModels.count
+        if currentlySearching {
+            return filteredHighSchoolViewModels.count
+        } else {
+            return highSchoolViewModels.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "highSchoolCell", for: indexPath) as? HighSchoolTableViewCell else {
             fatalError("failed to dequeue High School cell")
         }
-        let highSchool = highSchoolViewModels[indexPath.row]
+        var highSchool = highSchoolViewModels[indexPath.row]
+        if currentlySearching {
+            highSchool = filteredHighSchoolViewModels[indexPath.row]
+        }
         cell.highSchoolViewModel = highSchool
         return cell
     }
@@ -128,12 +146,21 @@ extension HighSchoolListViewController: UITableViewDataSource {
 // UISearchController - UISearchResultsUpdating
 extension HighSchoolListViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        // Search text gets processed here
+        guard let searchText = searchController.searchBar.text,
+              !searchText.isEmpty else {
+            currentlySearching = false
+            tableView.reloadData()
+            return
+        }
+        currentlySearching = true
+        searchHighSchools(searchText)
+        tableView.reloadData()
     }
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         searchBar.setShowsCancelButton(true, animated: true)
     }
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        currentlySearching = false
         searchBar.resignFirstResponder()
         searchBar.setShowsCancelButton(false, animated: true)
         searchBar.text = ""
