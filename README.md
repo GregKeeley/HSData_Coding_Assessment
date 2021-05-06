@@ -3,8 +3,8 @@ Coding Assessment
 
 # NYC High School SAT Scores
 
-### Goal - Using the Swift native framework, fetch, parse and display JSON Data from the NYC open database. 
-##### Using the APIs found provided by [NYC Open Data](https://opendata.cityofnewyork.us), provide a list of NYC High Schools, and their average SAT Scores.
+### Goal: Using the Swift native framework - fetch, parse and display JSON Data from the NYC open database. 
+##### Using the APIs provided by [NYC Open Data](https://opendata.cityofnewyork.us), provide a list of NYC High Schools, and their average SAT Scores.
 
 ## API Endpoints used
 + [List of NYC High Schools](https://data.cityofnewyork.us/resource/s3k6-pzi2.json)
