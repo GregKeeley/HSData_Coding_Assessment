@@ -52,6 +52,8 @@ class HighSchoolDetailViewController: UIViewController {
     private func configureView() {
         highSchoolNameLabel.text = satScoreViewModel?.schoolName
         highSchoolNameLabel.tintColor = AppColors.primaryDarkBlue
+        highSchoolNameLabel.font = UIFont.boldSystemFont(ofSize: 36)
+        highSchoolNameLabel.adjustsFontSizeToFitWidth = true
         numOfTestTakersLabel.text = "Total Test Takers: \(satScoreViewModel?.numOfTestTakers ?? -1)"
         totalSATScoreLabel.text = "\(satScoreViewModel?.totalSATScore ?? -1)"
         avgMathScoreLabel.text = "\(satScoreViewModel?.avgMathScore ?? -1)"
