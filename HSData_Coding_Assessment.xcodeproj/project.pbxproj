@@ -22,6 +22,8 @@
 		888580A02643058A005D973C /* HighSchoolViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8885809F2643058A005D973C /* HighSchoolViewModel.swift */; };
 		888580A2264315FB005D973C /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888580A1264315FB005D973C /* NetworkHelper.swift */; };
 		888580A626432794005D973C /* HighSchoolDataAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888580A526432794005D973C /* HighSchoolDataAPIClient.swift */; };
+		888580A926435EB3005D973C /* HighSchoolTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888580A826435EB3005D973C /* HighSchoolTableViewCell.swift */; };
+		888580AB2643626D005D973C /* UIStyleGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888580AA2643626D005D973C /* UIStyleGuide.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		8885809F2643058A005D973C /* HighSchoolViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighSchoolViewModel.swift; sourceTree = "<group>"; };
 		888580A1264315FB005D973C /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		888580A526432794005D973C /* HighSchoolDataAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighSchoolDataAPIClient.swift; sourceTree = "<group>"; };
+		888580A826435EB3005D973C /* HighSchoolTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighSchoolTableViewCell.swift; sourceTree = "<group>"; };
+		888580AA2643626D005D973C /* UIStyleGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStyleGuide.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,7 @@
 			children = (
 				888580902642F792005D973C /* Supporting Files */,
 				8885809A2643055A005D973C /* Models */,
+				888580A726435E7E005D973C /* View */,
 				88858092264303CE005D973C /* Network Services */,
 				88858094264304C3005D973C /* High School List */,
 				88858095264304CC005D973C /* High School Detail */,
@@ -148,6 +153,7 @@
 				888580622642F6E8005D973C /* SceneDelegate.swift */,
 				888580692642F6EA005D973C /* Assets.xcassets */,
 				8885806B2642F6EA005D973C /* LaunchScreen.storyboard */,
+				888580AA2643626D005D973C /* UIStyleGuide.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -195,6 +201,14 @@
 				8885809F2643058A005D973C /* HighSchoolViewModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		888580A726435E7E005D973C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				888580A826435EB3005D973C /* HighSchoolTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,10 +345,12 @@
 				888580A2264315FB005D973C /* NetworkHelper.swift in Sources */,
 				888580652642F6E8005D973C /* HighSchoolListViewController.swift in Sources */,
 				8885809E2643057C005D973C /* SATScoreModel.swift in Sources */,
+				888580AB2643626D005D973C /* UIStyleGuide.swift in Sources */,
 				8885809726430525005D973C /* HighSchoolDetailViewController.swift in Sources */,
 				888580612642F6E8005D973C /* AppDelegate.swift in Sources */,
 				888580632642F6E8005D973C /* SceneDelegate.swift in Sources */,
 				888580A02643058A005D973C /* HighSchoolViewModel.swift in Sources */,
+				888580A926435EB3005D973C /* HighSchoolTableViewCell.swift in Sources */,
 				888580A626432794005D973C /* HighSchoolDataAPIClient.swift in Sources */,
 				8885809C2643056F005D973C /* HighSchoolModel.swift in Sources */,
 			);

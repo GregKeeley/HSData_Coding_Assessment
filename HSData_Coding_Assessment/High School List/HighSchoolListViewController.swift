@@ -15,14 +15,39 @@ class HighSchoolListViewController: UIViewController {
     //MARK:- Variables/Constants
     var resultSearchController = UISearchController()
     
+    var highSchoolViewModels = [HighSchoolViewModel]()
+    var highSchoolsSATScores = [HighSchoolSATScore]()
     
     //MARK:- View Life Cycles
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
         setupSearchController()
+        setupViewController()
+        fetchData()
     }
 
     //MARK:- Functions
+    private func setupViewController() {
+        
+        view.backgroundColor = AppColors.primaryLiteBlue
+        
+        // TableView UI
+        tableView.backgroundColor = AppColors.primaryDarkBlue
+        tableView.register(HighSchoolTableViewCell.self, forCellReuseIdentifier: "highSchoolCell")
+        tableView.separatorColor = AppColors.primaryDarkBlue
+        tableView.rowHeight = UITableView.automaticDimension
+        
+        // Navigation Bar
+        navigationController?.navigationBar.isTranslucent = true
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.backgroundColor = AppColors.primaryLiteBlue
+        
+    }
+    
     private func setupSearchController() {
         resultSearchController = ({
             let controller = UISearchController(searchResultsController: nil)
@@ -35,11 +60,61 @@ class HighSchoolListViewController: UIViewController {
         })()
     }
     
+    private func fetchData() {
+        
+        HighSchoolDataAPIClient.fetchHighSchools { (results) in
+            switch results {
+            case .failure(let appError):
+                print("Error fetching High School data: \(appError)")
+            case .success(let highSchoolsData):
+                DispatchQueue.main.async {
+                    
+                    self.highSchoolViewModels = highSchoolsData.map({return HighSchoolViewModel(highSchool: $0)})
+                    self.tableView.reloadData()
+                }
+                
+            }
+        }
+        
+        HighSchoolDataAPIClient.fetchSATScores { (results) in
+            switch results {
+            case .failure(let appError):
+                print("Error fetching SAT Scores: \(appError)")
+            case .success(let highSchoolSATScoresData):
+                DispatchQueue.main.async {
+                    self.highSchoolsSATScores = highSchoolSATScoresData
+                }
+            }
+        }
+    }
+    
     //MARK:- @IBActions
 
 }
 
 //MARK:- Extensions
+
+// Tableview Delegate
+extension HighSchoolListViewController: UITableViewDelegate {
+    
+}
+// Tableview DataSource
+extension HighSchoolListViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return highSchoolViewModels.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "highSchoolCell", for: indexPath) as? HighSchoolTableViewCell else {
+            fatalError("failed to dequeue High School cell")
+        }
+        let highSchool = highSchoolViewModels[indexPath.row]
+        cell.highSchoolViewModel = highSchool
+        return cell
+    }
+}
+
+// UISearchController - UISearchResultsUpdating
 extension HighSchoolListViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         // Search text gets processed here

@@ -9,6 +9,6 @@ import Foundation
 
 class HighSchool: Decodable {
     
-    let dbn: String?, school_name: String?
+    let dbn: String?, school_name: String?, neighborhood: String?
     
 }
