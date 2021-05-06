@@ -15,16 +15,8 @@ class HighSchoolListViewController: UIViewController {
     //MARK:- Variables/Constants
     var resultSearchController = UISearchController()
     
-    var highSchoolViewModels = [HighSchoolViewModel]() {
-        didSet {
-            print("No of High Schools: \(highSchoolViewModels.count)")
-        }
-    }
-    var highSchoolsSATScores = [HighSchoolSATScore]() {
-        didSet {
-            print("No of SAT Score for schools: \(highSchoolsSATScores.count)")
-        }
-    }
+    var highSchoolViewModels = [HighSchoolViewModel]()
+    var highSchoolsSATScores = [HighSchoolSATScore]()
     
     //MARK:- View Life Cycles
     override func viewDidLoad() {
@@ -53,7 +45,6 @@ class HighSchoolListViewController: UIViewController {
         navigationController?.navigationBar.isTranslucent = true
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         navigationController?.navigationBar.backgroundColor = AppColors.primaryLiteBlue
-        
     }
     
     private func setupSearchController() {
@@ -69,7 +60,6 @@ class HighSchoolListViewController: UIViewController {
     }
     
     private func fetchData() {
-        
         HighSchoolDataAPIClient.fetchHighSchools { (results) in
             switch results {
             case .failure(let appError):
@@ -110,7 +100,14 @@ extension HighSchoolListViewController: UITableViewDelegate {
             print("dbn not found")
             return
         }
-        dump(satScoreForHighSchool)
+        
+        if let satScoreDetailViewController = UIStoryboard(name: "HighSchoolDetailView", bundle: nil).instantiateViewController(identifier: "SATScoreDetailView") as? HighSchoolDetailViewController {
+            satScoreDetailViewController.highSchoolSATScoreViewModel = HighSchoolSATScoreViewModel(highSchoolSATScore: satScoreForHighSchool)
+            if let navigator = navigationController {
+                dismiss(animated: true, completion: nil)
+                navigator.pushViewController(satScoreDetailViewController, animated: true)
+            }
+        }
     }
 }
 // Tableview DataSource
