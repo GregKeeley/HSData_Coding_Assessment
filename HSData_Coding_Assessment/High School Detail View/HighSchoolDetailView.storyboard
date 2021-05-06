@@ -16,13 +16,104 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High School Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="quj-Fo-XZH">
+                                <rect key="frame" x="20" y="44" width="142" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No of test takers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rYN-Tw-tHh">
+                                <rect key="frame" x="20" y="73" width="126" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vO3-aJ-nA4">
+                                <rect key="frame" x="155.5" y="437.5" width="103.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Writing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8U-fm-Fu5">
+                                <rect key="frame" x="290.5" y="437.5" width="103.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Math Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s1y-eQ-gtp">
+                                <rect key="frame" x="20" y="437.5" width="103.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="DLb-pz-u4g">
+                                <rect key="frame" x="20" y="279" width="374" height="4"/>
+                            </progressView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FMZ-hl-23c">
+                                <rect key="frame" x="26" y="478.5" width="92" height="4"/>
+                            </progressView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dXH-LE-4Re">
+                                <rect key="frame" x="161" y="478.5" width="92" height="4"/>
+                            </progressView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="wrn-T1-pD0">
+                                <rect key="frame" x="296.5" y="478.5" width="92" height="4"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average SAT Score (Total)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kbf-Ud-aRa">
+                                <rect key="frame" x="20" y="250" width="199" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FMZ-hl-23c" firstAttribute="top" secondItem="s1y-eQ-gtp" secondAttribute="bottom" constant="20" id="07d-Nd-5c2"/>
+                            <constraint firstItem="Kbf-Ud-aRa" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="43j-uK-Ieh"/>
+                            <constraint firstItem="vO3-aJ-nA4" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="5iB-PF-N7L"/>
+                            <constraint firstItem="wrn-T1-pD0" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.222222" id="Adg-bF-RJx"/>
+                            <constraint firstItem="FMZ-hl-23c" firstAttribute="centerX" secondItem="s1y-eQ-gtp" secondAttribute="centerX" id="AmE-da-7Zo"/>
+                            <constraint firstItem="rYN-Tw-tHh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="CfW-00-0GG"/>
+                            <constraint firstItem="DLb-pz-u4g" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="EVI-0i-kG3"/>
+                            <constraint firstItem="s1y-eQ-gtp" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.25" id="HEu-5A-0LP"/>
+                            <constraint firstItem="vO3-aJ-nA4" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="HqF-Dc-9RU"/>
+                            <constraint firstItem="s1y-eQ-gtp" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="KE1-Jy-r5A"/>
+                            <constraint firstItem="dXH-LE-4Re" firstAttribute="centerX" secondItem="vO3-aJ-nA4" secondAttribute="centerX" id="Oze-sP-zZB"/>
+                            <constraint firstItem="wrn-T1-pD0" firstAttribute="top" secondItem="Z8U-fm-Fu5" secondAttribute="bottom" constant="20" id="URJ-hr-L3X"/>
+                            <constraint firstItem="quj-Fo-XZH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Yhp-3a-YSO"/>
+                            <constraint firstItem="Z8U-fm-Fu5" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="ZTe-yI-Qs1"/>
+                            <constraint firstItem="FMZ-hl-23c" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.222222" id="ay2-mR-2fF"/>
+                            <constraint firstItem="dXH-LE-4Re" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.222222" id="cU1-1a-szW"/>
+                            <constraint firstItem="dXH-LE-4Re" firstAttribute="top" secondItem="vO3-aJ-nA4" secondAttribute="bottom" constant="20" id="cx2-eV-sPV"/>
+                            <constraint firstItem="vO3-aJ-nA4" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.25" id="doh-RN-WJN"/>
+                            <constraint firstItem="DLb-pz-u4g" firstAttribute="top" secondItem="Kbf-Ud-aRa" secondAttribute="bottom" constant="8" symbolic="YES" id="gH4-jG-MDg"/>
+                            <constraint firstItem="Kbf-Ud-aRa" firstAttribute="top" secondItem="rYN-Tw-tHh" secondAttribute="bottom" constant="156" id="gSj-c7-SIN"/>
+                            <constraint firstItem="rYN-Tw-tHh" firstAttribute="top" secondItem="quj-Fo-XZH" secondAttribute="bottom" constant="8" symbolic="YES" id="h68-sh-XbV"/>
+                            <constraint firstItem="s1y-eQ-gtp" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="jaq-M5-IRV"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Z8U-fm-Fu5" secondAttribute="trailing" constant="20" id="lPa-Um-HUl"/>
+                            <constraint firstItem="Z8U-fm-Fu5" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.25" id="mwW-ne-YSh"/>
+                            <constraint firstItem="wrn-T1-pD0" firstAttribute="centerX" secondItem="Z8U-fm-Fu5" secondAttribute="centerX" id="rVg-im-2Xi"/>
+                            <constraint firstItem="quj-Fo-XZH" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="uRM-NC-JIH"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="DLb-pz-u4g" secondAttribute="trailing" constant="20" id="vll-8t-s5z"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="avgMathProgressBar" destination="FMZ-hl-23c" id="Jeg-hx-cGI"/>
+                        <outlet property="avgMathScoreLabel" destination="s1y-eQ-gtp" id="ksJ-uw-Bgp"/>
+                        <outlet property="avgReadingScoreLabel" destination="vO3-aJ-nA4" id="p1v-sl-t5i"/>
+                        <outlet property="avgReadingScoreProgressBar" destination="dXH-LE-4Re" id="ERv-No-c8k"/>
+                        <outlet property="avgWritingScoreLabel" destination="Z8U-fm-Fu5" id="KQR-A2-bLA"/>
+                        <outlet property="avgWritingScoreProgressBar" destination="wrn-T1-pD0" id="4lM-Qs-7mi"/>
+                        <outlet property="highSchoolNameLabel" destination="quj-Fo-XZH" id="mWB-O1-oIE"/>
+                        <outlet property="numOfTestTakersLabel" destination="rYN-Tw-tHh" id="z9P-5c-x3J"/>
+                        <outlet property="totalSATScoreLabel" destination="Kbf-Ud-aRa" id="YrN-eE-9kV"/>
+                        <outlet property="totalSATScoreProgressBar" destination="DLb-pz-u4g" id="8Gr-IM-Xsi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="97" y="107"/>
+            <point key="canvasLocation" x="95.652173913043484" y="106.47321428571428"/>
         </scene>
     </scenes>
     <resources>

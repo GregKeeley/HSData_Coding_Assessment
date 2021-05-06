@@ -102,7 +102,7 @@ extension HighSchoolListViewController: UITableViewDelegate {
         }
         
         if let satScoreDetailViewController = UIStoryboard(name: "HighSchoolDetailView", bundle: nil).instantiateViewController(identifier: "SATScoreDetailView") as? HighSchoolDetailViewController {
-            satScoreDetailViewController.highSchoolSATScoreViewModel = HighSchoolSATScoreViewModel(highSchoolSATScore: satScoreForHighSchool)
+            satScoreDetailViewController.satScoreViewModel = HighSchoolSATScoreViewModel(highSchoolSATScore: satScoreForHighSchool)
             if let navigator = navigationController {
                 dismiss(animated: true, completion: nil)
                 navigator.pushViewController(satScoreDetailViewController, animated: true)

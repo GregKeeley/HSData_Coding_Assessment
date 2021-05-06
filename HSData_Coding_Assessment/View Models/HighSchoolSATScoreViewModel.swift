@@ -11,6 +11,7 @@ struct HighSchoolSATScoreViewModel {
     
     let schoolName: String, dbn: String
     let avgMathScore: Int, avgCriticalReadingScore: Int, avgWritingScore: Int, numOfTestTakers: Int
+    let totalSATScore: Int
     
     init(highSchoolSATScore: HighSchoolSATScore) {
         
@@ -20,6 +21,8 @@ struct HighSchoolSATScoreViewModel {
         self.avgCriticalReadingScore = Int(highSchoolSATScore.avgCriticalReadingScore) ?? -1
         self.avgWritingScore = Int(highSchoolSATScore.avgWritingScore) ?? -1
         self.numOfTestTakers = Int(highSchoolSATScore.numOfSATTestTakers) ?? -1
+        
+        self.totalSATScore = (avgWritingScore + avgMathScore + avgCriticalReadingScore)
         
     }
 }
