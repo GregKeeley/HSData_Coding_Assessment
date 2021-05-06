@@ -9,6 +9,14 @@ import Foundation
 
 class HighSchoolSATScore: Decodable {
     
-    let dbn: String, num_of_sat_test_takers: String, sat_critical_reading_avg_score: String, sat_math_avg_score: String, sat_writing_avg_score: String
+    let dbn: String, numOfSATTestTakers: String, schoolName: String, avgCriticalReadingScore: String, avgMathScore: String, avgWritingScore: String
     
+    private enum CodingKeys: String, CodingKey {
+        case dbn
+        case numOfSATTestTakers = "num_of_sat_test_takers"
+        case schoolName = "school_name"
+        case avgCriticalReadingScore = "sat_critical_reading_avg_score"
+        case avgMathScore = "sat_math_avg_score"
+        case avgWritingScore = "sat_writing_avg_score"
+    }
 }

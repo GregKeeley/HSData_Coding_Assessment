@@ -100,7 +100,7 @@ class HSData_Coding_AssessmentTests: XCTestCase {
         let expectedName = "Clinton School Writers & Artists, M.S. 260"
         do {
             let results = try JSONDecoder().decode(HighSchool.self, from: jsonData)
-            let name = results.school_name
+            let name = results.schoolName
             XCTAssertEqual(expectedName, name)
         } catch {
             XCTFail("Decoding Error: \(error)")
@@ -123,7 +123,7 @@ class HSData_Coding_AssessmentTests: XCTestCase {
         let expectedAvgMathScore = "404"
         do {
             let results = try JSONDecoder().decode(HighSchoolSATScore.self, from: jsonData)
-            let avgMathScore = results.sat_math_avg_score
+            let avgMathScore = results.avgMathScore
             XCTAssertEqual(expectedAvgMathScore, avgMathScore)
         } catch {
             XCTFail("Decoding Error: \(error)")
