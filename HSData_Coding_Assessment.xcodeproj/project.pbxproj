@@ -109,7 +109,6 @@
 		888580542642F6E8005D973C = {
 			isa = PBXGroup;
 			children = (
-				889A5E68264463080042FCF7 /* Media */,
 				8885805F2642F6E8005D973C /* HSData_Coding_Assessment */,
 				888580762642F6EB005D973C /* HSData_Coding_AssessmentTests */,
 				888580812642F6EB005D973C /* HSData_Coding_AssessmentUITests */,
@@ -130,6 +129,7 @@
 		8885805F2642F6E8005D973C /* HSData_Coding_Assessment */ = {
 			isa = PBXGroup;
 			children = (
+				889A5E68264463080042FCF7 /* Media */,
 				888580902642F792005D973C /* Supporting Files */,
 				88858092264303CE005D973C /* Network Services */,
 				888580AC264370D8005D973C /* View Models */,
