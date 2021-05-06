@@ -18,9 +18,10 @@ class HighSchoolDetailViewController: UIViewController {
     @IBOutlet weak var avgWritingScoreLabel: UILabel!
     
     @IBOutlet weak var totalSATScoreProgressBar: UIProgressView!
-    @IBOutlet weak var avgMathProgressBar: UIProgressView!
-    @IBOutlet var avgReadingScoreProgressBar: UIProgressView!
-    @IBOutlet weak var avgWritingScoreProgressBar: UIProgressView!
+    
+    @IBOutlet weak var mathProgressBar: CustomProgressBar!
+    @IBOutlet weak var readingProgressBar: CustomProgressBar!
+    @IBOutlet weak var writingProgressBar: CustomProgressBar!
     
     //MARK:- Variables/Constants
     var satScoreViewModel: HighSchoolSATScoreViewModel?
@@ -48,11 +49,14 @@ class HighSchoolDetailViewController: UIViewController {
         avgReadingScoreLabel.text = "Reading \(satScoreViewModel?.avgCriticalReadingScore ?? -1)"
         avgWritingScoreLabel.text = "Writing \(satScoreViewModel?.avgWritingScore ?? -1)"
         
-        // TODO: SAT Score on the progress bar need to be respective to the fac tha the minimum score is 400
-        totalSATScoreProgressBar.progress = Float((satScoreViewModel?.totalSATScore ?? 0) / 1200)
-        avgMathProgressBar.progress = Float((satScoreViewModel?.avgMathScore ?? 0) / 800)
-        avgReadingScoreProgressBar.progress = Float((satScoreViewModel?.avgCriticalReadingScore ?? 0) / 400)
-        avgWritingScoreProgressBar.progress = Float((satScoreViewModel?.avgWritingScore ?? 0) / 400)
+        // Total SAT Score based on a Max total of 1600
+        totalSATScoreProgressBar.progress = Float(Double(satScoreViewModel?.totalSATScore ?? 0) / 1600)
         
+        // Math score can be from 200 - 800, for a range of 600
+        mathProgressBar.progress = CGFloat(Double(satScoreViewModel?.avgMathScore ?? 0) / 600)
+        
+        // Reading and writing combined have a max of 800, and similar to 800
+        readingProgressBar.progress = CGFloat(Double(satScoreViewModel?.avgCriticalReadingScore ?? 0) / 500)
+        writingProgressBar.progress = CGFloat(Double(satScoreViewModel?.avgWritingScore ?? 0) / 500)
     }
 }

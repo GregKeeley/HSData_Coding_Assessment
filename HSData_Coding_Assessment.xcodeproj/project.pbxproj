@@ -25,6 +25,7 @@
 		888580A926435EB3005D973C /* HighSchoolTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888580A826435EB3005D973C /* HighSchoolTableViewCell.swift */; };
 		888580AB2643626D005D973C /* UIStyleGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888580AA2643626D005D973C /* UIStyleGuide.swift */; };
 		888580AE2643982D005D973C /* HighSchoolSATScoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888580AD2643982C005D973C /* HighSchoolSATScoreViewModel.swift */; };
+		888580B026442365005D973C /* CustomProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888580AF26442365005D973C /* CustomProgressBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		888580A826435EB3005D973C /* HighSchoolTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighSchoolTableViewCell.swift; sourceTree = "<group>"; };
 		888580AA2643626D005D973C /* UIStyleGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStyleGuide.swift; sourceTree = "<group>"; };
 		888580AD2643982C005D973C /* HighSchoolSATScoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighSchoolSATScoreViewModel.swift; sourceTree = "<group>"; };
+		888580AF26442365005D973C /* CustomProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +125,7 @@
 				88858092264303CE005D973C /* Network Services */,
 				888580AC264370D8005D973C /* View Models */,
 				8885809A2643055A005D973C /* Models */,
-				888580A726435E7E005D973C /* View */,
+				888580A726435E7E005D973C /* Views */,
 				88858094264304C3005D973C /* High School TableView */,
 				88858095264304CC005D973C /* High School Detail View */,
 				8885806E2642F6EA005D973C /* Info.plist */,
@@ -205,12 +207,13 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		888580A726435E7E005D973C /* View */ = {
+		888580A726435E7E005D973C /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				888580A826435EB3005D973C /* HighSchoolTableViewCell.swift */,
+				888580AF26442365005D973C /* CustomProgressBar.swift */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		888580AC264370D8005D973C /* View Models */ = {
@@ -353,6 +356,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				888580B026442365005D973C /* CustomProgressBar.swift in Sources */,
 				888580A2264315FB005D973C /* NetworkHelper.swift in Sources */,
 				888580652642F6E8005D973C /* HighSchoolListViewController.swift in Sources */,
 				8885809E2643057C005D973C /* SATScoreModel.swift in Sources */,
