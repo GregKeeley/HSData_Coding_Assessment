@@ -27,9 +27,9 @@
 		888580AE2643982D005D973C /* HighSchoolSATScoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888580AD2643982C005D973C /* HighSchoolSATScoreViewModel.swift */; };
 		888580B026442365005D973C /* CustomProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888580AF26442365005D973C /* CustomProgressBar.swift */; };
 		889A5E67264440650042FCF7 /* ShowAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889A5E66264440650042FCF7 /* ShowAlert.swift */; };
-		889A5E6C2644632C0042FCF7 /* SATScoreDetailViewController.png in Resources */ = {isa = PBXBuildFile; fileRef = 889A5E692644632B0042FCF7 /* SATScoreDetailViewController.png */; };
-		889A5E6D2644632C0042FCF7 /* SearchHighSchools.png in Resources */ = {isa = PBXBuildFile; fileRef = 889A5E6A2644632C0042FCF7 /* SearchHighSchools.png */; };
-		889A5E6E2644632C0042FCF7 /* HSListViewController.png in Resources */ = {isa = PBXBuildFile; fileRef = 889A5E6B2644632C0042FCF7 /* HSListViewController.png */; };
+		889A5E72264468DC0042FCF7 /* SearchHighSchoolList.png in Resources */ = {isa = PBXBuildFile; fileRef = 889A5E6F264468DC0042FCF7 /* SearchHighSchoolList.png */; };
+		889A5E73264468DC0042FCF7 /* HighSchoolListViewController.png in Resources */ = {isa = PBXBuildFile; fileRef = 889A5E70264468DC0042FCF7 /* HighSchoolListViewController.png */; };
+		889A5E74264468DC0042FCF7 /* SATScoreDetailViewController.png in Resources */ = {isa = PBXBuildFile; fileRef = 889A5E71264468DC0042FCF7 /* SATScoreDetailViewController.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,9 +76,9 @@
 		888580AD2643982C005D973C /* HighSchoolSATScoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighSchoolSATScoreViewModel.swift; sourceTree = "<group>"; };
 		888580AF26442365005D973C /* CustomProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressBar.swift; sourceTree = "<group>"; };
 		889A5E66264440650042FCF7 /* ShowAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "\U0010ShowAlert.swift"; sourceTree = "<group>"; };
-		889A5E692644632B0042FCF7 /* SATScoreDetailViewController.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SATScoreDetailViewController.png; sourceTree = "<group>"; };
-		889A5E6A2644632C0042FCF7 /* SearchHighSchools.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SearchHighSchools.png; sourceTree = "<group>"; };
-		889A5E6B2644632C0042FCF7 /* HSListViewController.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HSListViewController.png; sourceTree = "<group>"; };
+		889A5E6F264468DC0042FCF7 /* SearchHighSchoolList.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SearchHighSchoolList.png; sourceTree = "<group>"; };
+		889A5E70264468DC0042FCF7 /* HighSchoolListViewController.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HighSchoolListViewController.png; sourceTree = "<group>"; };
+		889A5E71264468DC0042FCF7 /* SATScoreDetailViewController.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SATScoreDetailViewController.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,9 +238,9 @@
 		889A5E68264463080042FCF7 /* Media */ = {
 			isa = PBXGroup;
 			children = (
-				889A5E6B2644632C0042FCF7 /* HSListViewController.png */,
-				889A5E692644632B0042FCF7 /* SATScoreDetailViewController.png */,
-				889A5E6A2644632C0042FCF7 /* SearchHighSchools.png */,
+				889A5E70264468DC0042FCF7 /* HighSchoolListViewController.png */,
+				889A5E71264468DC0042FCF7 /* SATScoreDetailViewController.png */,
+				889A5E6F264468DC0042FCF7 /* SearchHighSchoolList.png */,
 			);
 			path = Media;
 			sourceTree = "<group>";
@@ -348,13 +348,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				889A5E6E2644632C0042FCF7 /* HSListViewController.png in Resources */,
 				888580992643053B005D973C /* HighSchoolDetailView.storyboard in Resources */,
 				8885806D2642F6EA005D973C /* LaunchScreen.storyboard in Resources */,
+				889A5E72264468DC0042FCF7 /* SearchHighSchoolList.png in Resources */,
+				889A5E74264468DC0042FCF7 /* SATScoreDetailViewController.png in Resources */,
 				8885806A2642F6EA005D973C /* Assets.xcassets in Resources */,
-				889A5E6D2644632C0042FCF7 /* SearchHighSchools.png in Resources */,
-				889A5E6C2644632C0042FCF7 /* SATScoreDetailViewController.png in Resources */,
 				888580682642F6E8005D973C /* HighSchoolListView.storyboard in Resources */,
+				889A5E73264468DC0042FCF7 /* HighSchoolListViewController.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
