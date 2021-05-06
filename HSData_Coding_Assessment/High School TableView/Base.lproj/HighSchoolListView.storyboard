@@ -41,7 +41,14 @@
                             <constraint firstItem="ygi-iE-flL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="bwr-u9-1hC"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="NYC High Schools" id="rLn-t3-5O2"/>
+                    <navigationItem key="navigationItem" title="NYC High Schools" id="rLn-t3-5O2">
+                        <barButtonItem key="rightBarButtonItem" title="Aa-Zz" id="fvL-WK-OZt">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="SortButtonPressed:" destination="BYZ-38-t0r" id="YDL-JU-oKY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="ygi-iE-flL" id="wxr-aG-SBQ"/>
                     </connections>

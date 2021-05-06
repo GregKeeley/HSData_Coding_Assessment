@@ -13,9 +13,9 @@ struct HighSchoolViewModel {
     
     init(highSchool: HighSchool) {
         
-        self.schoolName = highSchool.schoolName ?? "No name available"
-        self.neighborhood = highSchool.neighborhood ?? "No neighborhood available"
-        self.dbn = highSchool.dbn ?? "dbn not available"
+        self.schoolName = highSchool.schoolName
+        self.neighborhood = highSchool.neighborhood
+        self.dbn = highSchool.dbn
             
     }
 

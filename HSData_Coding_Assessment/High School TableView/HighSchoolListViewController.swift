@@ -7,6 +7,11 @@
 
 import UIKit
 
+enum SortMethod {
+    case ascending
+    case descending
+}
+
 class HighSchoolListViewController: UIViewController {
     
     //MARK:- IBOutlets
@@ -18,7 +23,7 @@ class HighSchoolListViewController: UIViewController {
     var highSchoolsSATScores = [HighSchoolSATScore]()
     var filteredHighSchoolViewModels = [HighSchoolViewModel]()
     var currentlySearching = false
-    
+    var currentSortMethod = SortMethod.ascending
     
     
     //MARK:- View Life Cycles
@@ -69,11 +74,10 @@ class HighSchoolListViewController: UIViewController {
                 print("Error fetching High School data: \(appError)")
             case .success(let highSchoolsData):
                 DispatchQueue.main.async {
-                    
-                    self.highSchoolViewModels = highSchoolsData.map({return HighSchoolViewModel(highSchool: $0)})
+                    let sortedHighSchools = highSchoolsData.sorted(by: {$0.schoolName < $1.schoolName})
+                    self.highSchoolViewModels = sortedHighSchools.map({return HighSchoolViewModel(highSchool: $0)})
                     self.tableView.reloadData()
                 }
-                
             }
         }
         
@@ -95,7 +99,19 @@ class HighSchoolListViewController: UIViewController {
         }
     }
     //MARK:- @IBActions
-
+    @IBAction func SortButtonPressed(_ sender: UIBarButtonItem) {
+        if currentSortMethod == .ascending {
+            currentSortMethod = .descending
+            highSchoolViewModels = highSchoolViewModels.sorted(by: {$0.schoolName > $1.schoolName})
+            navigationItem.rightBarButtonItem?.title = "Zz-Aa"
+        } else {
+            currentSortMethod = .ascending
+            highSchoolViewModels = highSchoolViewModels.sorted(by: {$0.schoolName < $1.schoolName})
+            navigationItem.rightBarButtonItem?.title = "Aa-Zz"
+        }
+        tableView.reloadData()
+    }
+    
 }
 
 //MARK:- Extensions

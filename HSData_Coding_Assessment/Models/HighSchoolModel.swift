@@ -9,7 +9,7 @@ import Foundation
 
 class HighSchool: Decodable {
     
-    let dbn: String?, schoolName: String?, neighborhood: String?
+    let dbn: String, schoolName: String, neighborhood: String
     
     private enum CodingKeys: String, CodingKey {
         case dbn
